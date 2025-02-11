@@ -122,3 +122,69 @@ public class ResultadoEscolar {
 
 Deve retornar Recuperação!.
 
+##
+
+### Switch Case
+
+A estrutura switch compara o valor de caso com o da variável sequencialmente, e sempre que encontra um valor correspondente, executa o código associado ao caso. Para evitar que as comparações continuem a serem executadas após um caso correspondente ter sido encontrado, acrescentamos o comando <strong>*break*</strong> no final de cada bloco de códigos. O comando <strong>*break*</strong>, quando executado, encerra a execuçao da estrutura onde ele se encontra.
+
+Vamos imaginar que precisaremos imprimir uma medida com base em mapa de valores, exemplo:
+
+| Sigla | Tamanho 
+| ----- | ------- 
+| P | Pequeno
+| M | Médio
+| G | Grande
+
+```java
+public class SistemaMedida {
+
+    public static void main(String[] args) {
+        String sigla = "M";
+
+        switch (sigla) {
+            case "P" ->  {
+                System.out.println("PEQUENO");
+            }
+            case "M" ->  {
+                System.out.println("MEDIO");
+            }
+            case "G" ->  {
+                System.out.println("GRANDE");
+            }
+            default -> System.out.println("INDEFINIDO");
+        }
+    }
+}
+```
+
+Deve retornar MEDIO.
+
+Pórem um cenário que poderíamos adequar o uso do switch/case para melhorar nosso algorítimo seria conforme ilustração abaixo:
+
+ O sistema terá 3 planos: BASIC, MIDIA, TURBO
+ - BASIC: 100 minutos de ligação
+ - MIDIA: 100 minutos de ligação + Whats e Instagram Grátis
+ - TURBO: 100 minutos de ligação + Whats e Instagram Grátis + 5Gb Youtube
+
+ ```java
+ public class PlanoOperadora {
+    public static void main(String[] args) {
+        String plano = "M";
+
+        switch (plano) {
+            case "T": {
+                System.out.println("5Gb Youtube");
+            }
+            case "M": {
+                System.out.println("Whats e Instagram Grátis");
+            }
+            case "B": {
+                System.out.println("100 minutos de ligação");
+            }
+        }
+    }
+}
+ ```
+
+Deve retornar Whats e Instagram Grátis, 100 minutos de ligação.
