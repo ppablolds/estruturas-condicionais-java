@@ -63,3 +63,27 @@ public class ResultadoEscolar {
 ```
 
 Deve Retornar <strong>Reprovado!</strong>.
+
+##
+
+### Condicionais Encadeadas
+
+Em um controle de fluxo condicional, nem sempre nos limitamos ao <strong>se</strong> (``if``) e <strong>senão</strong> (``else``), poderemos ter uma terceira, quarta ou inúmeras condições.
+
+```java
+public class ResultadoEscolar {
+    public static void main(String[] args) {
+        int nota = 6;
+
+        if(nota >= 7) {
+            System.out.println("Aprovado!");
+        } else if(nota >= 5 && nota < 7) {
+            System.out.println("Recuperação!");
+        } else {
+            System.out.println("Reprovado!");
+        }
+    }
+}
+```
+
+Deve imprimir Recuperação!.
