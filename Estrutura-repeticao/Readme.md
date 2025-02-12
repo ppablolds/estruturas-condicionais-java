@@ -51,5 +51,33 @@ public class ExemploFor {
         }
     }
 }
-
  ```
+
+ ##
+
+ ### Break e Continue
+
+ <strong>Break</strong> significa parar, quebrar, frear, interromper. E é isso que se faz quando o Java encontra esse comando pela frente. <strong>Continue</strong>, como o nome diz, ele "continua" o laço. O comando `break` interrompe o laço, já o `continue` interrompe somente a iteração atual.
+
+ ```java
+ public class ExemploBreakContinue {
+    public static void main(String[] args) {
+        for(int numero = 1; numero <=5; numero++) {
+            if(numero == 3) break;
+            System.out.println(numero);
+        }
+    }
+}
+ ```
+Deve retornar 2.
+
+```java
+public class ExemploBreakContinue {
+    public static void main(String[] args) {
+        for(int numero = 1; numero <=5; numero++) {
+            if(numero == 3) continue;
+            System.out.println(numero);
+        }
+    }
+}
+```
