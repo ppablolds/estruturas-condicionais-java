@@ -132,3 +132,45 @@ public class ExemploWhile {
 ```
 
 Deve retornar Joaozinho gastou toda sua mesada em doces!.
+
+##
+
+### Do / While
+
+O laço `Do / While` (na tradução literal "faça... enquanto"), assim como o laço while, considera que enquanto uma determinada condição for válida o bloco de código será executado. Entretanto, `Do / While` testa a condição após executar o código, sendo assim, mesmo que a condição seja considerada inválida no primeiro teste o bloco será executado pelo menos uma vez.
+
+A estrutura de sintaxe do controle de repetição `Do / While` é exibida abaixo:
+
+```java
+// Estrutra do controle de fluxo
+
+do {
+// Comando que será executado até que a expressão de validação torne-se falsa
+} while (expressão booleana de validação);
+```
+
+Joãozinho resolveu ligar para o seu amigo dizendo que se entupiu de tanto comer doces:
+
+```java
+import java.util.Random;
+
+public class ExemploDoWhile {
+    public static void main(String[] args) {
+        System.out.println("Discando...");
+
+        do {
+            // Executa repetidamente até alguém atender
+            System.out.println("Telefone tocando...");
+        } while (tocando());
+
+        System.out.println("Alô!!!");
+    }
+
+    private static boolean tocando() {
+        boolean atendeu = new Random().nextInt(3)==1;
+        System.out.println("Atendeu?" + atendeu);
+        // Negando o ate parar de continuar tocando
+        return ! atendeu;
+    }
+}
+```
