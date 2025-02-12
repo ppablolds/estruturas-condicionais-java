@@ -81,3 +81,5 @@ public class ExemploBreakContinue {
     }
 }
 ```
+
+Deve retornar 5.
